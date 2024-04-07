@@ -15,7 +15,6 @@
 - django-click
 - environs[django]
 - pre-commit
-- psycopg2-binary
 - whitenoise
 
 ### :green_heart: CI
@@ -33,7 +32,7 @@
 ```shell
 $ django-admin startproject \
     --extension=ini,py,toml,yaml,yml \
-    --template=https://github.com/jefftriplett/django-startproject/archive/main.zip \
+    --template=https://github.com/scuerda/django-startproject/archive/main.zip \
     example_project
 ```
 
