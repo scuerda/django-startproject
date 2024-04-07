@@ -46,7 +46,11 @@ INSTALLED_APPS = [
 
 # Third-party apps
 
-INSTALLED_APPS += []
+INSTALLED_APPS += [
+    "django_filters",
+    "django_htmx",
+    "neapolitan",
+]
 
 # Our apps
 
@@ -61,6 +65,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django_htmx.middleware.HtmxMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -88,7 +93,10 @@ WSGI_APPLICATION = "config.wsgi.application"
 # https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
 
 DATABASES = {
-    "default": env.dj_db_url("DATABASE_URL", default="postgres:///{{ project_name }}"),
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "{{ project_name }}",
+    }
 }
 
 
