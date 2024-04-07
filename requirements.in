@@ -1,7 +1,6 @@
 django-click
 Django<5.1
 environs[django]
-psycopg2-binary
 whitenoise
 
 django-test-plus
@@ -10,3 +9,7 @@ pre-commit
 pytest
 pytest-cov
 pytest-django
+
+django-htmx
+neapolitan
+django-template-partials
